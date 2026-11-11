@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nori design system</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="icon" href="https://www.norirobotics.com/favicon-mark.84d68036.png">
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* page-only layout for the specimen; every component below uses the site's own classes */
+  .ds { padding-block: 64px 96px; }
+  .ds section { padding: 48px 0; border-top: 1px solid var(--line); }
+  .ds h2 { margin-bottom: 28px; }
+  .swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+  .sw { padding: 6px; }
+  .sw i { display: block; height: 72px; border-radius: var(--r-sm); border: 1px solid var(--line); }
+  .sw b { display: block; padding: 10px 8px 2px; font-size: 14px; font-weight: 600; }
+  .sw span { display: block; padding: 0 8px 6px; }
+  .row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+  .scale > div { display: grid; grid-template-columns: 140px 1fr; align-items: baseline; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+  .space { display: flex; align-items: flex-end; gap: 10px; flex-wrap: wrap; }
+  .space i { display: block; background: var(--green); border-radius: 2px; }
+  .space div { display: grid; justify-items: center; gap: 6px; }
+  .demo-card { padding: 24px; }
+</style>
+</head>
+<body>
+<main class="wrap ds">
+  <p class="label">Nori · design system</p>
+  <h1 class="t-hero" style="margin:16px 0 8px">Quiet page, loud robot. <span class="mute">Tokens and components behind norirobotics.com.</span></h1>
+  <p class="lead">The rules live in DESIGN-SYSTEM.md; this page renders them from the site's own stylesheet, so it can't drift from the site.</p>
+
+  <section>
+    <h2>Colour</h2>
+    <div class="swatches">
+      <div class="card sw"><i style="background:var(--paper)"></i><b>paper</b><span class="label">#fbfbfa · page</span></div>
+      <div class="card sw"><i style="background:var(--surface)"></i><b>surface</b><span class="label">#f4f4f1 · cards</span></div>
+      <div class="card sw"><i style="background:var(--ink)"></i><b>ink</b><span class="label">#151518 · text, primary</span></div>
+      <div class="card sw"><i style="background:var(--ink-2)"></i><b>ink-2</b><span class="label">#3c3c42 · long copy</span></div>
+      <div class="card sw"><i style="background:var(--muted)"></i><b>muted</b><span class="label">#6e6e73 · 4.9:1</span></div>
+      <div class="card sw"><i style="background:var(--green)"></i><b>green</b><span class="label">#97bf3d · decoration</span></div>
+      <div class="card sw"><i style="background:var(--green-ink)"></i><b>green-ink</b><span class="label">#4e7412 · 5.3:1</span></div>
+      <div class="card sw"><i style="background:var(--sage)"></i><b>sage</b><span class="label">#909874 · film only</span></div>
+    </div>
+  </section>
+
+  <section class="scale">
+    <h2>Type</h2>
+    <div><span class="label">Hero</span><span class="t-hero">NORI A3 <span class="mute">The most capable robot</span></span></div>
+    <div><span class="label">Section</span><h3 style="margin:0;font:600 clamp(30px,3.6vw,48px)/1.1 var(--sans);letter-spacing:-.035em">Everyday tasks <span class="mute" style="display:block">Nori can support you.</span></h3></div>
+    <div><span class="label">Item</span><span class="t-item">Helping in the kitchen</span></div>
+    <div><span class="label">Lead</span><span class="lead">Train your Nori at home, share its skills anywhere.</span></div>
+    <div><span class="label">Body</span><span>Antonio is the founder of Nori Robotics.</span></div>
+    <div><span class="label">Small</span><span class="t-small">Full price, no deposit</span></div>
+    <div><span class="label">Label</span><span class="label">// Ships fall 2026</span></div>
+  </section>
+
+  <section>
+    <h2>Space</h2>
+    <div class="space">
+      <div><i style="width:4px;height:4px"></i><span class="label">4</span></div>
+      <div><i style="width:8px;height:8px"></i><span class="label">8</span></div>
+      <div><i style="width:12px;height:12px"></i><span class="label">12</span></div>
+      <div><i style="width:16px;height:16px"></i><span class="label">16</span></div>
+      <div><i style="width:24px;height:24px"></i><span class="label">24</span></div>
+      <div><i style="width:32px;height:32px"></i><span class="label">32</span></div>
+      <div><i style="width:48px;height:48px"></i><span class="label">48</span></div>
+      <div><i style="width:64px;height:64px"></i><span class="label">64</span></div>
+      <div><i style="width:96px;height:96px"></i><span class="label">96</span></div>
+      <div><i style="width:128px;height:128px"></i><span class="label">128</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Buttons</h2>
+    <div class="row">
+      <a class="btn btn--ink btn--lg" href="#">Order now<span class="arr" aria-hidden="true">→</span></a>
+      <a class="btn btn--line btn--lg" href="#">Contact us</a>
+      <a class="btn btn--ink" href="#">Order<span class="arr" aria-hidden="true">→</span></a>
+      <a class="btn btn--line" href="#">Order now<span class="arr" aria-hidden="true">→</span></a>
+      <a class="btn btn--ink btn--sm" href="#">Email</a>
+      <a class="btn btn--line btn--sm" href="#">LinkedIn</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Cards</h2>
+    <div class="cards cards--3">
+      <div class="card demo-card"><p class="label">Card</p><p class="t-item" style="margin-top:12px">Surface, 1px line, radius 14</p></div>
+      <div class="cell"><svg class="yc" viewBox="0 0 16 16" aria-hidden="true"><rect width="16" height="16" rx="3.5"/><path d="M4.6 3.8 8 8.9l3.4-5.1M8 8.9v3.6"/></svg>Trust cell</div>
+      <dl class="card spec-list" style="grid-template-columns:1fr"><div class="spec"><dt class="label">Arms</dt><dd><strong>7+1 DOF</strong><span>Spec row: label, figure, one line.</span></dd></div></dl>
+    </div>
+  </section>
+
+  <section>
+    <h2>Section head</h2>
+    <header class="head" style="margin:0">
+      <div><p class="label">Hardware</p><h3 style="margin:0;font:600 clamp(30px,3.6vw,48px)/1.1 var(--sans);letter-spacing:-.035em">Affordable and capable</h3></div>
+      <a class="btn btn--line" href="#">Order now<span class="arr" aria-hidden="true">→</span></a>
+    </header>
+  </section>
+
+  <section>
+    <h2>Motion</h2>
+    <div class="scale">
+      <div><span class="label">ease</span><span>cubic-bezier(.23,1,.32,1) · every UI response and entrance</span></div>
+      <div><span class="label">ease-flow</span><span>cubic-bezier(.22,1,.36,1) · opening and closing</span></div>
+      <div><span class="label">180ms</span><span>press, hover, colour</span></div>
+      <div><span class="label">560ms</span><span>feature switch crossfade</span></div>
+      <div><span class="label">700ms</span><span>section entrance: fade + 12px rise, 60ms stagger</span></div>
+    </div>
+  </section>
+</main>
+</body>
+</html>
